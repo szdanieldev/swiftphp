@@ -1,0 +1,12 @@
+{
+  "name": "szdaniel/swiftphp",
+  "version": "1.0",
+  "description": "Easy to use PHP framework for small projects",
+  "type": "library",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}

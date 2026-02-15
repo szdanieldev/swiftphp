@@ -1,0 +1,25 @@
+<?php
+
+return [
+    // App preferences
+    'app' => [
+        'name' => 'PHPFramework',          // App Name
+        'default_title' => 'PHPFramework',   // Default HTML title
+        'default_lang' => 'en',           // Default language
+    ],
+
+    // Database
+    'db' => [
+        'host' => 'localhost',
+        'port' => 3306,
+        'dbname' => 'framework',
+        'user' => 'root',
+        'password' => '',
+        'charset' => 'utf8mb4',
+    ],
+
+    // Localization
+    'localization' => [
+        'path' => __DIR__ . '/../localization/',
+    ]
+];
