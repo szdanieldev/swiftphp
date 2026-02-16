@@ -77,7 +77,7 @@ class App
 
     protected function isLoggedIn(): bool
     {
-        return isset($_SESSION['user_id']);
+        return isset($_SESSION['user']['id']);
     }
 
     protected function triggerError(int $code = 500, string $message = null)

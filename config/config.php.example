@@ -1,11 +1,12 @@
 <?php
 
 return [
+
     // App preferences
     'app' => [
-        'name' => 'SwiftPHP',            // App Name
-        'default_title' => 'SwiftPHP',   // Default HTML title
-        'default_lang' => 'en',          // Default language
+        'name' => 'SwiftPHP',
+        'default_title' => 'SwiftPHP - Fast and lightweght PHP framework.',
+        'default_lang' => 'en',
     ],
 
     // Database
@@ -21,5 +22,13 @@ return [
     // Localization
     'localization' => [
         'path' => __DIR__ . '/../localization/',
+    ],
+
+    // Views
+    'views' => [
+        'path' => __DIR__ . '/../app/Views/',
+        'layouts_path' => __DIR__ . '/../app/Views/_layouts/',
+        'master' => 'master.php',
+        'default_layout' => 'public',
     ]
 ];

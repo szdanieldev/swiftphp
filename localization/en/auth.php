@@ -1,9 +1,18 @@
 <?php
 return [
-    'login_title' => 'Login',
-    'register_title' => 'Registration',
-    'all_fields_required' => 'All fields are required!',
-    'invalid_credentials' => 'Invalid username or password.',
-    'username_unavailable' => 'This username is already taken.',
-    'registration_error' => 'An error occurred during registration.'
+    'login_title' => 'Belépés',
+    'login_description' => 'Jelentkezzen be a folytatáshoz',
+    'username' => 'Felhasználónév',
+    'username_placeholder' => 'felhasználónév',
+    'password' => 'Jelszó',
+    'password_placeholder' => '••••••••',
+    'login' => 'Bejelentkezés',
+    'register' => 'Regisztráció',
+    'no_account' => 'Nincs még fiókja?',
+    'back_to_home' => 'Vissza a főoldalra',
+    'register_title' => 'Regisztráció',
+    'all_fields_required' => 'Minden mező kitöltése kötelező!',
+    'invalid_credentials' => 'Érvénytelen felhasználónév vagy jelszó.',
+    'username_unavailable' => 'Ez a felhasználónév már foglalt.',
+    'registration_error' => 'Hiba történt a regisztráció során.'
 ];

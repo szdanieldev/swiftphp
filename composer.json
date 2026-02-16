@@ -1,6 +1,6 @@
 {
-  "name": "szdaniel/swiftphp",
-  "version": "1.0",
+  "name": "szdanieldev/swiftphp",
+  "version": "1.1",
   "description": "SwiftPHP is a lightweight and modern MVC framework built with pure PHP. It focuses on simplicity, performance, and developer control without unnecessary complexity. ",
   "type": "library",
   "require": {},

@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 
-class Landing extends Controller
+class Welcome extends Controller
 {
     public function index()
     {
-        $this->view("landing/landing");
+        $this->view("welcome/welcome");
     }
 }

@@ -15,7 +15,7 @@ class Database
 
         try {
             $this->pdo = new PDO(
-                "mysql:host={$db['host']};dbname={$db['dbname']};charset={$db['charset']}",
+                "mysql:host={$db['host']};port={$db['port']};dbname={$db['dbname']};charset={$db['charset']}",
                 $db['user'],
                 $db['password']
             );

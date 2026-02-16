@@ -25,5 +25,12 @@ return [
     'gateway_timeout_title' => 'Átjáró időtúllépés',
     'gateway_timeout_message' => 'A szerver nem kapott választ időben a háttérrendszertől.',
     'error_title' => 'Hiba',
-    'error_message' => 'Váratlan hiba történt.'
+    'error_message' => 'Váratlan hiba történt.',
+    // Error view
+    'title' => 'Hoppá, hiba történt.',
+    'description' => 'Ismeretlen hiba történt.',
+    'home_button' => 'Kezdőlap',
+    'back_button' => 'Vissza',
+    'app_label' => 'Alkalmazás',
+    'swiftphp_label' => 'SwiftPHP',
 ];

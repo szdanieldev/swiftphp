@@ -8,8 +8,10 @@ class Auth extends Controller
 {
     public function login()
     {
-        if ($this->isLoggedIn()) {
-            $this->redirect('/dashboard');
+        $userModel = $this->model('User');
+
+        if ($this->check()) {
+            return $this->redirect('/dashboard');
         }
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -23,15 +25,10 @@ class Auth extends Controller
                 ]);
             }
 
-            $userModel = $this->model('User');
-            $user = $userModel->findByUsername($username);
+            $user = $userModel->attempt($username, $password);
 
-            if ($user && password_verify($password, $user['password'])) {
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['fullname'] = $user['full_name'];
-                $_SESSION['username'] = $user['username'];
-                $_SESSION['email'] = $user['email'];
-
+            if ($user) {
+                $userModel->login($user);
                 return $this->redirect('/dashboard');
             }
 
@@ -48,8 +45,10 @@ class Auth extends Controller
 
     public function register()
     {
-        if ($this->isLoggedIn()) {
-            $this->redirect('/dashboard');
+        $userModel = $this->model('User');
+
+        if ($this->check()) {
+            return $this->redirect('/dashboard');
         }
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -66,8 +65,6 @@ class Auth extends Controller
                     'error' => $this->lang('all_fields_required', 'auth')
                 ]);
             }
-
-            $userModel = $this->model('User');
 
             if ($userModel->findByUsername($data['username'])) {
                 return $this->view('auth/register', [
@@ -93,27 +90,14 @@ class Auth extends Controller
 
     public function logout()
     {
-        $_SESSION = [];
-        if (ini_get("session.use_cookies")) {
-            $params = session_get_cookie_params();
-            setcookie(
-                session_name(),
-                '',
-                time() - 42000,
-                $params["path"],
-                $params["domain"],
-                $params["secure"],
-                $params["httponly"]
-            );
-        }
+        unset($_SESSION['user']);
         session_destroy();
-
-        $this->redirect('/auth/login');
+        return $this->redirect('/auth/login');
     }
 
-    protected function isLoggedIn(): bool
+    public function check(): bool
     {
-        return isset($_SESSION['user_id']);
+        return isset($_SESSION['user']['id']);
     }
 
     protected function redirect(string $url)
