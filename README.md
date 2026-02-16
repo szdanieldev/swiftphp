@@ -163,4 +163,4 @@ Planned future improvements:
 
 ## 📜 License
 
-MIT License
+SwiftPHP is published under the [MIT License](https://github.com/szdanieldev/swiftphp/blob/master/LICENSE).
