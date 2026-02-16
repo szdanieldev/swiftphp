@@ -86,11 +86,11 @@ class Controller
 
         $msg = $message ?? "Error {$code} occurred.";
         echo "<!DOCTYPE html>
-<html>
-<head><meta charset='UTF-8'><title>Error {$code}</title></head>
-<body>
-<h1>Error {$code}</h1><p>{$msg}</p>
-</body></html>";
+                <html>
+                <head><meta charset='UTF-8'><title>Error {$code}</title></head>
+                <body>
+                <h1>Error {$code}</h1><p>{$msg}</p>
+                </body></html>";
         exit;
     }
 }

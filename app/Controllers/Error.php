@@ -16,7 +16,6 @@ class Error extends Controller
         $code = is_numeric($code) ? (int)$code : 500;
         http_response_code($code);
 
-        // Lokalizált üzenetek
         $errorData = $this->getErrorMessages($code);
 
         $this->view('status/error', [
@@ -28,7 +27,6 @@ class Error extends Controller
 
     private function getErrorMessages($code)
     {
-        // Kulcsok: title, message
         $messages = [
             400 => [
                 'title'   => $this->lang('bad_request_title', 'error'),
