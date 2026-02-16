@@ -72,7 +72,7 @@ Feel free to submit issues and pull requests.
 
 MIT License -->
 
-### SwiftPHP Documentation
+# SwiftPHP Documentation
 
 SwiftPHP is a lightweight and modern MVC framework built with pure PHP. It focuses on simplicity, performance, and developer control without unnecessary complexity.
 

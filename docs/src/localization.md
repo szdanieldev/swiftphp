@@ -1,4 +1,4 @@
-### Localization
+# Localization
 
 SwiftPHP supports multi-language applications.
 

@@ -1,4 +1,4 @@
-### Authentication
+# Authentication
 
 SwiftPHP includes a built-in authentication system.
 

@@ -1,4 +1,4 @@
-### Views
+# Views
 
 Views render HTML output.
 

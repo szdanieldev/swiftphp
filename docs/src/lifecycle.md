@@ -1,4 +1,4 @@
-### Request Lifecycle
+# Request Lifecycle
 
 1. Request enters through `public/index.php`
 2. Core system initializes

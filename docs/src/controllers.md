@@ -1,4 +1,4 @@
-### Controllers
+# Controllers
 
 Controllers handle HTTP requests and return responses.
 

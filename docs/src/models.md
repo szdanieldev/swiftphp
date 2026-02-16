@@ -1,4 +1,4 @@
-### Models
+# Models
 
 Models handle database interaction and business logic.
 
