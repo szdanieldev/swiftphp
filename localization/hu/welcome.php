@@ -42,7 +42,7 @@ return [
     'step_3_label' => '3. Document Root beállítása',
     'step_3_desc' => 'Állítsa be a webszerver dokumentum gyökérkönyvtárát (document root) a <span class="text-primary-400 font-mono">/public</span> mappára.',
     'full_docs_label' => 'Teljes dokumentáció:',
-    'docs_folder' => '/docs mappa',
+    'docs_folder' => '/docs',
 
     // CTA Section
     'ready_to_build' => 'Készen áll az <span class="gradient-text">építésre</span>?',

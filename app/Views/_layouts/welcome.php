@@ -1,3 +1,14 @@
+<?php
+$composerFile = __DIR__ . '/../../../composer.json';
+$swiftPhpVersion = 'unknown';
+if (file_exists($composerFile)) {
+    $composer = json_decode(file_get_contents($composerFile), true);
+    if (isset($composer['version'])) {
+        $swiftPhpVersion = $composer['version'];
+    }
+}
+?>
+
 <body class="bg-slate-950 text-slate-100 min-h-screen mesh-gradient">
 
     <nav class="fixed w-full z-50 glass-effect border-b border-slate-800/50 animate-fade-in">
@@ -32,7 +43,7 @@
                     </div>
                     <div>
                         <span class="text-lg font-bold text-white"><?= $this->lang('app_name', 'common') ?></span>
-                        <p class="text-slate-500 text-xs"><?= $this->lang('version_license', 'common') ?></p>
+                        <p class="text-slate-500 text-xs"><?= htmlspecialchars($swiftPhpVersion) ?> • <?= $this->lang('version_license', 'common') ?></p>
                     </div>
                 </div>
 

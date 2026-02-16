@@ -17,6 +17,19 @@ $layout = 'auth';
         <p class="text-slate-400"><?= $this->lang('login_description', 'auth') ?></p>
     </div>
 
+    <?php if (isset($data['success'])):
+    ?>
+        <div class="mb-6 p-4 rounded-xl bg-green-950/30 border border-green-800/50 flex items-start gap-3 animate-slide-up">
+            <div class="w-6 h-6 rounded-full bg-green-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <p class="text-green-300 text-sm"><?= htmlspecialchars($data['success']) ?></p>
+        </div>
+    <?php endif;
+    ?>
+
     <?php if (isset($data['error'])): ?>
         <div class="mb-6 p-4 rounded-xl bg-red-950/30 border border-red-800/50 flex items-start gap-3 animate-pulse">
             <div class="w-6 h-6 rounded-full bg-red-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">

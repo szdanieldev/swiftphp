@@ -55,7 +55,6 @@ class Controller
         include $viewFile;
         $content = ob_get_clean();
 
-        // Ha view-ben lett beállítva layout
         $layout = $layout ?? $defaultLayout;
 
         if ($layout) {

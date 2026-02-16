@@ -1,4 +1,4 @@
-<?php $layout = 'public'; ?>
+<?php $layout = 'welcome'; ?>
 <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-4xl mx-auto animate-slide-up">
@@ -11,12 +11,16 @@
             </div>
 
             <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-                <span class="text-white"><?= $this->lang('welcome_to', 'welcome') ?></span>
-                <br>
-                <span class="gradient-text">SwiftPHP</span>
-                <span class="text-3xl md:text-5xl align-top text-primary-400">⚡</span>
-                <br>
-                <span class="text-white"><?= $this->lang('swiftphp_world', 'welcome') ?></span>
+                <?php if (isset($data['title'])): ?>
+                    <span class="text-white"><?= $data['title'] ?></span>
+                <?php else: ?>
+                    <span class="text-white"><?= $this->lang('welcome_to', 'welcome') ?></span>
+                    <br>
+                    <span class="gradient-text">SwiftPHP</span>
+                    <span class="text-3xl md:text-5xl align-top text-primary-400">⚡</span>
+                    <br>
+                    <span class="text-white"><?= $this->lang('swiftphp_world', 'welcome') ?></span>
+                <?php endif; ?>
             </h1>
 
             <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed font-light">

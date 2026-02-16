@@ -14,6 +14,11 @@ class Auth extends Controller
             return $this->redirect('/dashboard');
         }
 
+        $success = null;
+        if (isset($_GET['registered']) && $_GET['registered'] == 1) {
+            $success = $this->lang('registration_success', 'auth');
+        }
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $username = trim($_POST['username'] ?? '');
             $password = $_POST['password'] ?? '';
@@ -39,7 +44,8 @@ class Auth extends Controller
         }
 
         return $this->view('auth/login', [
-            'title' => $this->lang('login_title', 'auth')
+            'title' => $this->lang('login_title', 'auth'),
+            'success' => $success
         ]);
     }
 
@@ -70,6 +76,13 @@ class Auth extends Controller
                 return $this->view('auth/register', [
                     'title' => $this->lang('register_title', 'auth'),
                     'error' => $this->lang('username_unavailable', 'auth')
+                ]);
+            }
+
+            if ($userModel->findByEmail($data['email'])) {
+                return $this->view('auth/register', [
+                    'title' => $this->lang('register_title', 'auth'),
+                    'error' => $this->lang('email_unavailable', 'auth')
                 ]);
             }
 

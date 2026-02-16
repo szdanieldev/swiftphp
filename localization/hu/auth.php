@@ -19,5 +19,7 @@ return [
     'all_fields_required' => 'Minden mező kitöltése kötelező!',
     'invalid_credentials' => 'Érvénytelen felhasználónév vagy jelszó.',
     'username_unavailable' => 'Ez a felhasználónév már foglalt.',
-    'registration_error' => 'Hiba történt a regisztráció során.'
+    'email_unavailable' => 'Ez az e-mail cím már használatban van.',
+    'registration_error' => 'Hiba történt a regisztráció során.',
+    'registration_success' => 'Sikeres regisztráció! Most már bejelentkezhet.',
 ];

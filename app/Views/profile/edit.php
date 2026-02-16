@@ -45,7 +45,7 @@
             </form>
 
             <div class="mt-6 pt-6 border-t border-slate-800 text-center">
-                <a href="/dashboard" class="text-slate-500 hover:text-slate-300 text-sm transition-colors">← <?= $this->lang('back_to_dashboard', 'profile') ?></a>
+                <a href="/dashboard" class="text-slate-500 hover:text-slate-300 text-sm transition-colors"><?= $this->lang('back_to_dashboard', 'profile') ?></a>
             </div>
         </div>
     </div>
