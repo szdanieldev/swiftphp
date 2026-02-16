@@ -1,7 +1,7 @@
 # SwiftPHP ⚡
 
 > SwiftPHP is a lightweight and modern MVC framework built with pure PHP.
-> It focuses on simplicity, performance, and developer control — without unnecessary complexity.
+> It focuses on simplicity, performance, and developer control without unnecessary complexity.
 
 SwiftPHP provides a clean foundation for building web applications with built-in routing, authentication, localization, and configuration handling.
 
