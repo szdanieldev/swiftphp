@@ -7,7 +7,7 @@ SwiftPHP provides a clean foundation for building web applications with built-in
 
 ---
 
-## ✨ Core Features
+## ✨ Features
 
 - Clean MVC architecture
 - Custom routing system
@@ -18,35 +18,6 @@ SwiftPHP provides a clean foundation for building web applications with built-in
 - Simple and extendable structure
 
 SwiftPHP is designed to stay minimal while still covering the essential features required for modern PHP applications.
-
----
-
-## 📁 Project Structure
-
-```text
-swiftphp/
-├── app/
-│   ├── Controllers/
-│   ├── Models/
-│   ├── Core/
-│   └── Views/
-│
-├── config/
-│   └── config.php
-│
-├── localization/
-│   ├── hu/
-│   └── en/
-│
-├── public/
-│   └── index.php
-│
-├── docs/
-│
-└── README.md
-```
-
-Detailed technical documentation is available inside the `/docs` directory.
 
 ---
 
