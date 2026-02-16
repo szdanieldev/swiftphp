@@ -3,16 +3,16 @@
 return [
     // App preferences
     'app' => [
-        'name' => 'PHPFramework',          // App Name
-        'default_title' => 'PHPFramework',   // Default HTML title
-        'default_lang' => 'en',           // Default language
+        'name' => 'SwiftPHP',            // App Name
+        'default_title' => 'SwiftPHP',   // Default HTML title
+        'default_lang' => 'en',          // Default language
     ],
 
     // Database
     'db' => [
         'host' => 'localhost',
         'port' => 3306,
-        'dbname' => 'framework',
+        'dbname' => 'swiftphp',
         'user' => 'root',
         'password' => '',
         'charset' => 'utf8mb4',
