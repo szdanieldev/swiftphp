@@ -3,9 +3,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">S</span>
-                    </div>
+                    <img src="/assets/images/swiftphp.svg" class="w-8 h-8 shadow-lg" alt="SwiftPHP Logo">
                     <span class="text-lg font-bold"><?= $this->lang('app_name', 'common') ?></span>
                 </div>
                 <div class="flex items-center space-x-4">

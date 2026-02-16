@@ -15,9 +15,7 @@ if (file_exists($composerFile)) {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center shadow-lg shadow-primary-500/20">
-                        <span class="text-white font-bold text-lg">S</span>
-                    </div>
+                    <img src="/assets/images/swiftphp.svg" class="w-8 h-8 shadow-lg" alt="SwiftPHP Logo">
                     <span class="text-xl font-bold text-white tracking-tight"><?= $this->lang('app_name', 'common') ?></span>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -38,9 +36,7 @@ if (file_exists($composerFile)) {
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">S</span>
-                    </div>
+                    <img src="/assets/images/swiftphp.svg" class="w-8 h-8 shadow-lg" alt="SwiftPHP Logo">
                     <div>
                         <span class="text-lg font-bold text-white"><?= $this->lang('app_name', 'common') ?></span>
                         <p class="text-slate-500 text-xs"><?= htmlspecialchars($swiftPhpVersion) ?> • <?= $this->lang('version_license', 'common') ?></p>
