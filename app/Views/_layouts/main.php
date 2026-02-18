@@ -22,6 +22,10 @@
                             <option value="hu" <?= $this->locale === 'hu' ? 'selected' : '' ?>>HU</option>
                             <option value="en" <?= $this->locale === 'en' ? 'selected' : '' ?>>EN</option>
                             <option value="de" <?= $this->locale === 'de' ? 'selected' : '' ?>>DE</option>
+                            <option value="es" <?= $this->locale === 'es' ? 'selected' : '' ?>>ES</option>
+                            <option value="fr" <?= $this->locale === 'fr' ? 'selected' : '' ?>>FR</option>
+                            <option value="it" <?= $this->locale === 'it' ? 'selected' : '' ?>>IT</option>
+                            <option value="pt" <?= $this->locale === 'pt' ? 'selected' : '' ?>>PT</option>
                         </select>
                     </div>
 
