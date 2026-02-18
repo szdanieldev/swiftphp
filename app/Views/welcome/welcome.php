@@ -16,10 +16,8 @@
                 <?php else: ?>
                     <span class="text-white"><?= $this->lang('welcome_to', 'welcome') ?></span>
                     <br>
-                    <span class="gradient-text">SwiftPHP</span>
+                    <span class="gradient-text"><?= $this->lang('swiftphp_world', 'welcome') ?></span>
                     <span class="text-3xl md:text-5xl align-top text-primary-400">⚡</span>
-                    <br>
-                    <span class="text-white"><?= $this->lang('swiftphp_world', 'welcome') ?></span>
                 <?php endif; ?>
             </h1>
 
