@@ -13,7 +13,7 @@ class Main extends Controller
         }
 
         return $this->view('main/dashboard', [
-            'title' => $this->lang('dashboard_title', 'dashboard')
+            'title' => $this->lang('dashboard_title', 'main')
         ]);
     }
 
