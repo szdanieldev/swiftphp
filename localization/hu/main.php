@@ -1,6 +1,7 @@
 <?php
 return [
     'greeting' => 'Szia, %s! 👋',
+    'dashboard_title' => 'Főoldal',
     'dashboard_welcome' => 'Üdvözöljük a SwiftPHP irányítópultján.',
     'username' => 'Felhasználónév',
     'email' => 'Email',

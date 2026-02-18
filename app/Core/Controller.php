@@ -5,14 +5,31 @@ namespace App\Core;
 class Controller
 {
     protected array $config;
-    protected $locale;
-    protected $translations = [];
+    protected string $locale;
+    protected array $translations = [];
 
     public function __construct()
     {
         $this->config = require __DIR__ . '/../../config/config.php';
 
-        $this->locale = $this->config['app']['default_lang'] ?? 'en';
+        $allowedLangs = ['hu', 'en', 'de'];
+        $defaultLang = $this->config['app']['default_lang'] ?? 'en';
+        $cookieExpire = time() + (86400 * 30);
+
+        if (isset($_GET['lang']) && in_array($_GET['lang'], $allowedLangs)) {
+            $this->locale = $_GET['lang'];
+            setcookie('lang', $this->locale, $cookieExpire, "/");
+        } elseif (isset($_COOKIE['lang']) && in_array($_COOKIE['lang'], $allowedLangs)) {
+            $this->locale = $_COOKIE['lang'];
+        } else {
+            $this->locale = $defaultLang;
+        }
+
+        $this->loadTranslations();
+    }
+
+    private function loadTranslations()
+    {
         $localizationPath = $this->config['localization']['path'] . $this->locale . '/';
 
         if (is_dir($localizationPath)) {

@@ -11,7 +11,10 @@ class Localization
     public function __construct(string $locale = null)
     {
         $config = require __DIR__ . '/../../config/config.php';
-        $this->locale = $locale ?? $config['app']['default_lang'];
+        // $this->locale = $locale ?? $config['app']['default_lang'];
+        // $this->path   = $config['localization']['path'] ?? __DIR__ . '/../../localization/';
+        // $this->load($this->locale);
+        $this->locale = $locale;
         $this->path   = $config['localization']['path'] ?? __DIR__ . '/../../localization/';
         $this->load($this->locale);
     }

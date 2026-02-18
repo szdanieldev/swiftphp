@@ -1,6 +1,7 @@
 <?php
 return [
     'greeting' => '¡Hola, %s! 👋',
+    'dashboard_title' => 'Panel',
     'dashboard_welcome' => 'Bienvenido al panel de control de SwiftPHP.',
     'username' => 'Nombre de usuario',
     'email' => 'Correo electrónico',
