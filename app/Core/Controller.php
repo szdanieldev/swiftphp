@@ -12,7 +12,7 @@ class Controller
     {
         $this->config = require __DIR__ . '/../../config/config.php';
 
-        $allowedLangs = ['hu', 'en', 'de'];
+        $allowedLangs = ['hu', 'en', 'de', 'es', 'fr', 'it', 'pt'];
         $defaultLang = $this->config['app']['default_lang'] ?? 'en';
         $cookieExpire = time() + (86400 * 30);
 
