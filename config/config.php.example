@@ -5,6 +5,7 @@ return [
     // App preferences
     'app' => [
         'name' => 'SwiftPHP',
+        'version' => 'v1.1.2',
         'default_title' => 'SwiftPHP - Fast and lightweght PHP framework.',
         'default_lang' => 'en',
     ],
@@ -13,7 +14,7 @@ return [
     'db' => [
         'host' => 'localhost',
         'port' => 3306,
-        'dbname' => 'swiftphp',
+        'dbname' => 'swift',
         'user' => 'root',
         'password' => '',
         'charset' => 'utf8mb4',
@@ -22,6 +23,7 @@ return [
     // Localization
     'localization' => [
         'path' => __DIR__ . '/../localization/',
+        'allowed_langs' => ['hu', 'en', 'de', 'es', 'fr', 'it', 'pt']
     ],
 
     // Views

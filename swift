@@ -2,8 +2,7 @@
 <?php
 
 /**
- * SwiftPHP CLI Tool - v1.2
- * Refined Validation & Manual Routing
+ * SwiftPHP CLI Tool - v1.1.2
  */
 
 if (php_sapi_name() !== 'cli') exit("This tool must be run from the command line.\n");
