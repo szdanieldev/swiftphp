@@ -93,7 +93,7 @@ class Controller
         include $masterFile;
     }
 
-    protected function triggerError(int $code = 500, string $message = null)
+    protected function triggerError(int $code = 500, ?string $message = null)
     {
         http_response_code($code);
 

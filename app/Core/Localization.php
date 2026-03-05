@@ -8,7 +8,7 @@ class Localization
     protected string $locale;
     protected string $path;
 
-    public function __construct(string $locale = null)
+    public function __construct(?string $locale = null)
     {
         $config = require __DIR__ . '/../../config/config.php';
         $this->locale = $locale;

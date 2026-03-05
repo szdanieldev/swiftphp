@@ -80,7 +80,7 @@ class App
         return isset($_SESSION['user']['id']);
     }
 
-    protected function triggerError(int $code = 500, string $message = null)
+    protected function triggerError(int $code = 500, ?string $message = null)
     {
         $errorControllerClass = Error::class;
         if (class_exists($errorControllerClass)) {
