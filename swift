@@ -16,7 +16,7 @@ match ($command) {
     'make:view'       => makeView(),
     'make:layout'     => makeLayout(),
     'db:init'         => initDatabase(),
-    'serve'           => serveApp($argv[2] ?? 8000),
+    'serve'           => serveApp(array_slice($argv, 2)),
     'help'            => showHelp(),
     default           => print("Unknown command. Use 'php swift help'.\n"),
 };
@@ -128,15 +128,45 @@ function initDatabase()
     }
 }
 
-function serveApp($port)
+function serveApp(array $args)
 {
+    $host = "localhost";
+    $port = 8000;
+
+    for ($i = 0; $i < count($args); $i++) {
+
+        switch ($args[$i]) {
+
+            case '--port':
+            case '-P':
+                $port = $args[$i + 1] ?? $port;
+                $i++;
+                break;
+
+            case '--host':
+            case '-H':
+                $host = $args[$i + 1] ?? $host;
+                $i++;
+                break;
+
+            default:
+                if (str_starts_with($args[$i], '--port=')) {
+                    $port = explode('=', $args[$i])[1];
+                }
+
+                if (str_starts_with($args[$i], '--host=')) {
+                    $host = explode('=', $args[$i])[1];
+                }
+        }
+    }
+
     echo "\n\033[1;32mSwiftPHP Development Server Started\033[0m\n";
-    echo "URL: http://localhost:$port\n";
+    echo "URL: http://{$host}:{$port}\n";
     echo "Root: public/\n";
     echo "OPcache: Disabled\n";
     echo "Press Ctrl+C to stop.\n\n";
 
-    passthru("php -d opcache.enable=0 -S localhost:{$port} -t public/");
+    passthru("php -d opcache.enable=0 -S {$host}:{$port} -t public/");
 }
 
 function showHelp()
@@ -150,6 +180,9 @@ Commands:
   \033[1;34mmake:view\033[0m         Generate a view file in a subfolder
   \033[1;34mmake:layout\033[0m       Generate a new base layout template
   \033[1;34mdb:init\033[0m           Initialize MySQL database from config
-  \033[1;34mserve [port]\033[0m      Run the app with auto-refresh support
+  \033[1;34mserve\033[0m             Run dev server (default localhost:8000)
+                    Options:
+                      --host, -H
+                      --port, -P
 ";
 }
