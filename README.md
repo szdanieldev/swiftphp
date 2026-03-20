@@ -2,9 +2,6 @@
 
 > SwiftPHP is a lightweight and modern MVC framework built with pure PHP.
 > It focuses on simplicity, performance, and developer control without unnecessary complexity.
-
-SwiftPHP provides a clean foundation for building web applications with built-in routing, authentication, localization, and configuration handling.
-
 ---
 
 ## ✨ Features
@@ -50,16 +47,6 @@ config/config.php
 ```
 
 Set your database credentials and application settings.
-
-### 5. Configure your web server
-
-Set the document root to:
-
-```text
-/public
-```
-
-SwiftPHP does not require Node.js by default.
 
 ---
 
@@ -115,20 +102,6 @@ config/config.php
 ## 📖 Documentation
 
 Full technical documentation is available in the `/docs` directory.
-
----
-
-## 🛣 Roadmap
-
-Planned future improvements:
-
-- Middleware system
-- CLI tooling
-- Plugin / package system
-- Improved debugging mode
-- Optional template engine support
-- Caching layer
-- REST API utilities
 
 ---
 
