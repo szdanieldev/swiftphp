@@ -54,10 +54,6 @@
     </main>
 
     <script>
-        /**
-         * Nyelvváltás kezelése sütivel kombinálva
-         * Az URL paraméter frissítése után a Controller.php elvégzi a többit.
-         */
         function changeLanguage(lang) {
             const url = new URL(window.location.href);
             url.searchParams.set('lang', lang);

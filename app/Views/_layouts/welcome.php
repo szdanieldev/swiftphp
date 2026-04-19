@@ -92,7 +92,6 @@ if (file_exists($composerFile)) {
 
     <script>
         function changeLanguage(lang) {
-            // A window.location.search kezelése biztosítja, hogy más GET paraméterek is megmaradjanak (ha vannak)
             const url = new URL(window.location.href);
             url.searchParams.set('lang', lang);
             window.location.href = url.toString();

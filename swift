@@ -2,11 +2,14 @@
 <?php
 
 /**
- * SwiftPHP CLI Tool - v1.1.2
+ * SwiftPHP CLI Tool - v1.1.3
  */
 
 if (php_sapi_name() !== 'cli') exit("This tool must be run from the command line.\n");
-
+if (!file_exists(__DIR__ . '/config/config.php')) {
+    echo "\033[1;31m  ! Error: config/config.php either did not exist or not valid.\033[0m\n";
+    exit;
+}
 $command = $argv[1] ?? 'help';
 
 match ($command) {

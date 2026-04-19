@@ -5,7 +5,7 @@ return [
     // App preferences
     'app' => [
         'name' => 'SwiftPHP',
-        'version' => 'v1.1.2',
+        'version' => 'v1.1.3',
         'default_title' => 'SwiftPHP - Fast and lightweght PHP framework.',
         'default_lang' => 'en',
     ],
